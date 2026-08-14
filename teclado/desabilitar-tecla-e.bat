@@ -1,11 +1,14 @@
 @echo off
 :: ATENCAO: a tecla E some em TODOS os teclados, inclusive USB.
-:: Se for usar teclado externo, use desabilitar-teclado-notebook.bat
-:: Rode como Administrador. O notebook reinicia sozinho.
-
+:: Prefira so-a-tecla-e.bat (religa o teclado interno e desliga so o E).
+net session >nul 2>&1
+if errorlevel 1 (
+  powershell -NoProfile -Command "Start-Process -FilePath '%~f0' -Verb RunAs"
+  exit /b
+)
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 0000000000000000020000000000120000000000 /f
 if errorlevel 1 (
-  echo Falhou. Clique com o botao direito neste arquivo e escolha Executar como administrador.
+  echo Falhou. Clique duas vezes de novo e aceite o UAC.
   pause
   exit /b 1
 )
