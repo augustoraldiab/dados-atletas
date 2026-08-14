@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; ATENCAO: isso desliga a tecla E em TODOS os teclados, inclusive USB.
+; Se for usar teclado externo, NAO use este arquivo.
+; Use desabilitar-teclado-notebook.bat (desliga so o teclado do notebook).
+;
+; Desabilita a tecla E no driver (Scancode 0x12 -> 00). Reinicie depois.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,00,00,12,00,00,00,00,00

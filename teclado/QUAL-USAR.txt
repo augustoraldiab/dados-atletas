@@ -1,0 +1,15 @@
+QUAL ARQUIVO USAR
+==================
+
+O que voce pediu (nativo ligado, so sem o E; USB com E):
+  e-nativo-usb-ok.bat
+  e-nativo-usb-ok.ps1     <- tem que estar na MESMA pasta
+
+Nao use nativo-sem-e.bat nem so-a-tecla-e.bat:
+  esses matam o E no USB tambem.
+
+Nao use usb-com-e.bat:
+  esse desliga o teclado nativo inteiro.
+
+Para parar o filtro:
+  desabilitar-filtro-e.bat
