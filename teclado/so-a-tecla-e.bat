@@ -1,7 +1,6 @@
 @echo off
-:: Desliga SOMENTE a tecla E (as outras continuam).
-:: ATENCAO: o E some em TODOS os teclados, inclusive USB.
-:: Clique duas vezes; o PC reinicia em 5 segundos.
+:: NAO USE este arquivo se precisar do E no teclado USB.
+:: Este mapa mata o E em TODOS os teclados. Use usb-com-e.bat.
 
 net session >nul 2>&1
 if errorlevel 1 (
