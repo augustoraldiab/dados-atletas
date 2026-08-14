@@ -1,0 +1,11 @@
+@echo off
+:: Rode como Administrador (botao direito -> Executar como administrador).
+:: Depois o notebook reinicia sozinho. Nao precisa digitar a letra E.
+
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 0000000000000000020000000000120000000000 /f
+if errorlevel 1 (
+  echo Falhou. Clique com o botao direito neste arquivo e escolha Executar como administrador.
+  pause
+  exit /b 1
+)
+shutdown /r /t 5 /c "Tecla E desabilitada. Reiniciando..."

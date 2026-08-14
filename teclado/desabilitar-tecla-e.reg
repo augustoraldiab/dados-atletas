@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Desabilita a tecla E no driver do teclado (Scancode 0x12 -> 00).
+; Clique duas vezes, aceite o UAC, depois REINICIE o notebook.
+; Nao precisa digitar nada.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=hex:00,00,00,00,00,00,00,00,02,00,00,00,00,00,12,00,00,00,00,00

@@ -1,0 +1,6 @@
+Windows Registry Editor Version 5.00
+
+; Volta a tecla E ao normal. Clique duas vezes, aceite o UAC, REINICIE.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout]
+"Scancode Map"=-
