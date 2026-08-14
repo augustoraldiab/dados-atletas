@@ -1,6 +1,7 @@
 @echo off
-:: Rode como Administrador (botao direito -> Executar como administrador).
-:: Depois o notebook reinicia sozinho. Nao precisa digitar a letra E.
+:: ATENCAO: a tecla E some em TODOS os teclados, inclusive USB.
+:: Se for usar teclado externo, use desabilitar-teclado-notebook.bat
+:: Rode como Administrador. O notebook reinicia sozinho.
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Keyboard Layout" /v "Scancode Map" /t REG_BINARY /d 0000000000000000020000000000120000000000 /f
 if errorlevel 1 (
